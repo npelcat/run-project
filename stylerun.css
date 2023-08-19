@@ -1,241 +1,205 @@
 /* ***********************MY WORK********************* */
 
+@font-face {
+  font-family: "SourceSans";
+  src: url(../run-project/assets/font/SourceSans3-VariableFont_wght.ttf);
+}
+/* Toujours mettre en premier les réglages généraux */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
   list-style: none;
-}
-button {
-  background: none;
+  /* OUTLINE : ligne de surlignement autour des input et textarea */
   outline: none;
-  border: 1px solid rgba(179, 178, 178, 0.7);
-  color: rgb(84, 82, 82);
-  text-transform: uppercase;
-  font-weight: 700;
-  transition: 0.4s ease;
-  cursor: pointer;
-  padding: 10px 20px;
-  letter-spacing: 2px;
-  border-radius: 50px;
 }
-button:hover {
-  color: rgb(89, 183, 237);
-  border: 1px solid rgb(89, 183, 237);
+h1 {
+  font-size: 3.4rem;
+  font-weight: 200;
 }
-body {
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-}
-h1,
 h2 {
-  font-weight: lighter;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: -1px;
 }
-
-header {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  overflow: hidden;
-  border: 1px solid rgb(196, 194, 194, 0.5);
+a,
+a:visited {
+  color: black;
+  text-decoration: none;
 }
-.header-text-container {
-  margin: auto 30px;
+p {
+  line-height: 36px;
+  margin: 25px 0;
 }
-.header-text {
-  text-align: left;
-  margin: auto 0;
+.button {
+  border: 1px solid #ccc;
+  background: transparent;
+  border-radius: 50px;
+  padding: 13px 30px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font: 700 0.75rem "SourceSans";
+  transition: 0.3s;
 }
-.header-text p {
-  line-height: 25px;
-  font-size: 0.8rem;
-  padding: 20px 0;
+.button:hover,
+footer a:hover {
+  border: 1px solid skyblue;
+  color: skyblue;
 }
-.header-img img {
-  max-width: 900px;
-  height: auto;
-  object-fit: contain;
-}
-.forest {
-  display: grid;
-  grid-template-columns: 40% 60%;
-}
-.forest-text {
-  text-align: left;
-  margin: auto 30px;
-}
-.forest-text p {
-  line-height: 25px;
-  font-size: 0.8rem;
-  padding: 20px 0;
-}
-.forest-img img {
-  width: 100%;
-  height: 100%;
-}
-.town {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  overflow: hidden;
-  border: 1px solid rgb(196, 194, 194, 0.5);
-}
-.town-text {
-  text-align: left;
-  margin: auto 30px;
-}
-.town-text p {
-  line-height: 25px;
-  font-size: 0.8rem;
-  padding: 20px 0;
-}
-.town-img {
-  height: 350px;
-  width: 500px;
-}
-.town-img img {
-  max-width: 100%;
-  height: auto;
-  object-fit: scale-down;
-}
-
-.form-titre h2 {
-  margin: 50px auto;
-}
-form {
-  display: grid;
-  width: 70%;
-  margin: 0 auto;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 3fr 1fr;
-  grid-template-areas:
-    "na em"
-    "nain emin"
-    "mes mes"
-    "mesin mesin"
-    "but but";
-}
-
-form label {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 55px;
 }
-.name {
-  grid-area: na;
+.section-1,
+.section-2,
+.contact {
+  box-shadow: inset 0 1px 0 #00000021;
+} /*BOX SHADOW INSET : ombre intérieure*/
+
+/* ****************************************** */
+
+body {
+  font-family: "SourceSans";
 }
-.email {
-  grid-area: em;
+header {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
-#name {
-  grid-area: nain;
+.img-banner {
+  background: url(../run-project/assets/img/banner.jpg) right/cover;
 }
-#email {
-  grid-area: emin;
+
+/* ************SECTION 1 ************ */
+
+.section-1 {
+  display: grid;
+  grid-template-columns: 37% 63%;
+  min-height: 400px;
 }
-.message {
-  grid-area: mes;
+.section-1 .img {
+  background: url(../run-project/assets/img/img-left.jpg) center/cover;
+}
+
+/* ***************SECTION 2***************** */
+
+.section-2 {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  min-height: 400px;
+}
+.section-2 .img {
+  background: url(../run-project/assets/img/img-right.jpg) center/cover;
+}
+
+/* **************CONTACT************** */
+
+.contact {
   text-align: center;
+  padding: 60px 0;
 }
-#message {
-  grid-area: mesin;
-  height: 170px;
-  resize: none;
+.form-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100px 224px;
+  grid-template-areas:
+    "input1 input2"
+    "textarea textarea";
+  /* WIDTH ET MARGIN POUR CENTRER, MAX-WIDTH pour limiter la taille sur un grand écran */
+  gap: 10px;
+  width: 85%;
+  margin: 30px auto;
+  max-width: 600px;
 }
-#btn-submit {
-  grid-area: but;
+.textarea {
+  grid-area: textarea;
 }
 
-input,
-textarea {
-  margin: 5px;
-  border: 1px solid rgb(203, 203, 211);
-  padding: 10px;
-  font-size: 1.1rem;
-  font-family: sans-serif;
-  border-radius: 5px;
-}
-
-#btn-submit {
-  background: none;
-  outline: none;
-  border: 1px solid rgba(179, 178, 178, 0.7);
-  color: rgb(84, 82, 82);
-  text-transform: uppercase;
-  font-weight: 700;
+label {
+  font-weight: 600;
   font-size: 0.8rem;
-  transition: 0.4s ease;
-  cursor: pointer;
-  padding: 10px 20px;
-  letter-spacing: 2px;
-  border-radius: 50px;
-  width: 300px;
-  margin: 0 auto 30px;
+  letter-spacing: 1px;
 }
-#btn-submit:hover {
-  color: rgb(89, 183, 237);
-  border: 1px solid rgb(89, 183, 237);
+input[type="text"],
+textarea {
+  width: 100%;
+  margin: 20px 0 40px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  transition: 0.2s;
+}
+/* FOCUS : quand l'élément est sélectionné ! */
+input[type="text"]:focus,
+textarea:focus {
+  border: 2px solid skyblue;
+}
+textarea {
+  resize: none;
+  height: 180px;
 }
 
-footer::after {
-  content: "";
-  height: 1px;
-  width: 90%;
-  background: rgb(196, 194, 194);
-  position: absolute;
-  bottom: 150px;
-}
+/* ***************FOOTER*********** */
 
 footer {
+  padding: 70px 0 90px;
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  background: #5656565a;
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+footer ul {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 50%;
-  margin: auto;
+  justify-content: space-between;
+  width: 33%;
+  margin: 0 auto;
+  min-width: 300px;
 }
 
-footer i {
-  color: black;
-  font-size: 1rem;
-  margin: 50px 0;
-  border: 1px solid rgb(196, 194, 194);
-  border-radius: 80px;
+footer a {
+  border: 1px solid #ccc;
+  border-radius: 50px;
   padding: 15px;
+  transition: 0.3s;
 }
 
-footer i:hover {
-  color: rgb(89, 183, 237);
-  border: 1px solid rgb(89, 183, 237);
-  cursor: pointer;
-}
+/* **********MEDIA QUERIES*************** */
 
-/* *******************MEDIA QUERIES******************* */
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 650px) {
+  header,
+  .section-1,
+  .section-2 {
+    display: block;
+  }
   header {
-    display: block;
+    height: auto;
   }
-  .header-text-container {
-    margin: 10% 30px;
+  header .img-banner {
+    height: 50vh;
+    margin-top: 30px;
   }
-  .forest-img img,
-  .town-img img {
-    display: none;
+  .container {
+    padding: 15px;
   }
-  .forest,
-  .town {
-    display: block;
+  footer ul {
+    min-width: 200px;
   }
-  .forest-text {
-    margin: 10% 30px;
+  footer a {
+    padding: 10px;
   }
-  .town-text {
-    margin: 10% 30px;
-  }
-  form {
-    display: block;
-    width: 100%;
-    margin: auto;
+  footer i {
+    font-size: 0.7rem;
   }
 }
