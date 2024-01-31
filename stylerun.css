@@ -71,7 +71,7 @@ header {
   grid-template-columns: 50% 50%;
 }
 .img-banner {
-  background: url(../run-project/assets/img/banner.jpg) right/cover;
+  background: url(./assets/img/banner.jpg) right/cover;
 }
 
 /* ************SECTION 1 ************ */
@@ -82,7 +82,7 @@ header {
   min-height: 400px;
 }
 .section-1 .img {
-  background: url(../run-project/assets/img/img-left.jpg) center/cover;
+  background: url(./assets/img/img-left.jpg) center/cover;
 }
 
 /* ***************SECTION 2***************** */
@@ -93,7 +93,7 @@ header {
   min-height: 400px;
 }
 .section-2 .img {
-  background: url(../run-project/assets/img/img-right.jpg) center/cover;
+  background: url(./assets/img/img-right.jpg) center/cover;
 }
 
 /* **************CONTACT************** */
